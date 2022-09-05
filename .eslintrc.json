@@ -9,6 +9,9 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["vue", "prettier"],
-  "rules": {}
+  "plugins": ["vue"],
+  "rules": {
+    "import/no-extraneous-dependencies": "off"
+  }
+
 }
