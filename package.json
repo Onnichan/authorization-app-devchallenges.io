@@ -8,10 +8,11 @@
     "build": "vite build",
     "preview": "vite preview",
     "prettier": "prettier --write .",
-    "lint": "eslint --fix . --ext .vue",
+    "lint": "eslint --fix . --ext .vue,.js",
     "prepare": "husky install"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "vue": "^3.2.37",
     "vuex": "^4.0.2"
   },
