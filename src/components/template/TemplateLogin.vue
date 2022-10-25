@@ -1,3 +1,8 @@
+<script setup>
+import OrganismLoginForm from "../organisms/Form/OrganismLoginForm.vue";
+
+const props = defineProps(["icons"]);
+</script>
 <template>
-  <div></div>
+  <OrganismLoginForm :icons="props.icons"></OrganismLoginForm>
 </template>
