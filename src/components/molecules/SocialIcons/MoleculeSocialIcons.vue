@@ -10,7 +10,11 @@ const iconsFiltered = () =>
 </script>
 <template>
   <div>
-    <AtomBaseButton type="button" v-for="(icon, index) in iconsFiltered()" :key="index">
+    <AtomBaseButton
+      type="button"
+      v-for="(icon, index) in iconsFiltered()"
+      :key="index"
+    >
       <component :is="icon.icon"></component>
     </AtomBaseButton>
   </div>

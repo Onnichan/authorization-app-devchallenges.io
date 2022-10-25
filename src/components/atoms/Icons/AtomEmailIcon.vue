@@ -2,7 +2,7 @@
 defineProps({
   width: String,
   height: String,
-})
+});
 </script>
 <template>
   <svg

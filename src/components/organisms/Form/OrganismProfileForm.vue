@@ -1,7 +1,5 @@
 <script setup>
-import AtomText from '../../atoms/Text/AtomText.vue';
-
-
+import AtomText from "../../atoms/Text/AtomText.vue";
 </script>
 <template>
   <div class="border border-gray-400 rounded-lg">
@@ -11,7 +9,7 @@ import AtomText from '../../atoms/Text/AtomText.vue';
     </div>
     <div>
       <AtomText>PHOTO</AtomText>
-      <img src="" alt="">
+      <img src="" alt="" />
     </div>
     <div>
       <AtomText>NAME</AtomText>

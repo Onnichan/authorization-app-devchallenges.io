@@ -2,8 +2,8 @@
 defineProps({
   tag: {
     type: String,
-    default: "span"
-  }
+    default: "span",
+  },
 });
 </script>
 <template>

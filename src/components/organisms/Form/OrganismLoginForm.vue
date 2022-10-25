@@ -48,7 +48,10 @@ const props = defineProps({ icons: Array });
     <AtomText class="mt-5 text-center text-gray-600"
       >or continue with these social profile</AtomText
     >
-    <MoleculeSocialIcons class="flex justify-center gap-5" :icons="props.icons"></MoleculeSocialIcons>
+    <MoleculeSocialIcons
+      class="flex justify-center gap-5"
+      :icons="props.icons"
+    ></MoleculeSocialIcons>
     <AtomText class="text-center">Already a member?</AtomText>
   </form>
 </template>
