@@ -1,4 +1,8 @@
 import { createApp } from "vue";
-import App from "./App.vue";
 
-createApp(App).mount("#app");
+import Routes from "./routes";
+
+import App from "./App.vue";
+import "./global.css";
+
+createApp(App).use(Routes).mount("#app");

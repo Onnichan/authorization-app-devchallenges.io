@@ -1,11 +1,13 @@
 <script setup>
 defineProps({
-  type: {
+  tag: {
     type: String,
-    default: "text",
+    default: "span",
   },
 });
 </script>
 <template>
-  <input :type="type" />
+  <component :is="tag">
+    <slot></slot>
+  </component>
 </template>
