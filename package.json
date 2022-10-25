@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "prettier": "prettier --write .",
-    "lint": "eslint --fix . --ext .vue,.js",
+    "lint": "eslint . --ext .vue,.js --fix ",
     "prepare": "husky install"
   },
   "dependencies": {
