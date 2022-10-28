@@ -5,6 +5,10 @@ const props = defineProps({
   icons: Array,
 });
 
+const handleOauth = (endpoint) => {
+  window.open(endpoint, "_self")
+};
+
 const iconsFiltered = () =>
   props.icons.filter((icon) => !icon.name.includes("lock", "email"));
 </script>
@@ -14,6 +18,7 @@ const iconsFiltered = () =>
       type="button"
       v-for="(icon, index) in iconsFiltered()"
       :key="index"
+      @click="handleOauth(icon.endpoint)"
     >
       <component :is="icon.icon"></component>
     </AtomBaseButton>
