@@ -6,7 +6,6 @@ import MoleculeSocialIcons from "../../molecules/SocialIcons/MoleculeSocialIcons
 import MoleculeTextField from "../../molecules/TextField/MoleculeTextField.vue";
 
 const props = defineProps({ icons: Array });
-
 </script>
 <template>
   <form class="p-14 border border-gray-500 rounded-3xl flex flex-col gap-5">
