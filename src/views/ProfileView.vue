@@ -14,6 +14,6 @@ onMounted(() => {
 });
 </script>
 <template>
-  {{user}}
+  {{ user }}
   <TemplateProfileForm></TemplateProfileForm>
 </template>
