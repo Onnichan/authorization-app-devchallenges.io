@@ -6,7 +6,7 @@ import OrganismEditProfile from "./OrganismEditProfile.vue";
 
 const showEditProfile = ref(false);
 
-defineProps(["user"])
+defineProps(["user"]);
 
 const handleEditProfile = (value) => {
   showEditProfile.value = value;
@@ -34,17 +34,13 @@ const handleEditProfile = (value) => {
       <AtomText class="text-gray-300 text-sm w-2/5 flex items-center"
         >PHOTO</AtomText
       >
-      <img
-        class="block w-20 h-20 rounded-md"
-        :src="user.image"
-        alt=""
-      />
+      <img class="block w-20 h-20 rounded-md" :src="user.image" alt="" />
     </div>
     <div class="px-10 py-6 flex border-t">
       <AtomText class="text-gray-300 text-sm w-2/5 flex items-center"
         >NAME</AtomText
       >
-      <AtomText>{{user.name}} {{user.lastname}}</AtomText>
+      <AtomText>{{ user.name }} {{ user.lastname }}</AtomText>
     </div>
     <div class="px-10 py-6 flex border-t">
       <AtomText class="text-gray-300 text-sm w-2/5 flex items-center"
@@ -64,7 +60,7 @@ const handleEditProfile = (value) => {
       <AtomText class="text-gray-300 text-sm w-2/5 flex items-center"
         >EMAIL</AtomText
       >
-      <AtomText>{{user.email}}</AtomText>
+      <AtomText>{{ user.email }}</AtomText>
     </div>
     <div class="px-10 py-6 flex border-t">
       <AtomText class="text-gray-300 text-sm w-2/5 flex items-center"
@@ -73,5 +69,5 @@ const handleEditProfile = (value) => {
       <AtomText></AtomText>
     </div>
   </div>
-  <OrganismEditProfile v-else :user="user"/>
+  <OrganismEditProfile v-else :user="user" />
 </template>

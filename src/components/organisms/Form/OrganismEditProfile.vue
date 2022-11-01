@@ -3,8 +3,7 @@ import AtomBaseButton from "../../atoms/Buttons/AtomBaseButton.vue";
 import AtomInput from "../../atoms/Input/AtomInput.vue";
 import AtomText from "../../atoms/Text/AtomText.vue";
 
-defineProps(["user"])
-
+defineProps(["user"]);
 </script>
 <template>
   <form

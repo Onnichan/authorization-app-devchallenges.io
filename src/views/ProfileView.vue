@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted} from "vue";
+import { onMounted } from "vue";
 import TemplateProfileForm from "../components/template/TemplateProfileForm.vue";
 import AuthService from "../services/auth.service";
 import store from "../store/index";
@@ -9,7 +9,7 @@ import store from "../store/index";
 onMounted(async () => {
   // console.log("mounted");
   const resp = await AuthService.oauthSuccessLogin();
-  if(resp){
+  if (resp) {
     console.log(resp);
     store.commit("auth/updateUser", resp);
   }

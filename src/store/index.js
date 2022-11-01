@@ -4,12 +4,10 @@ import auth from "./modules/auth.module";
 const debug = process.env.NODE_ENV !== "production";
 
 export default createStore({
-  modules:{
+  modules: {
     auth,
   },
-  state: {
-    
-  },
+  state: {},
   strict: debug,
-  plugins: debug ? [createLogger()]: [],
-})
+  plugins: debug ? [createLogger()] : [],
+});
