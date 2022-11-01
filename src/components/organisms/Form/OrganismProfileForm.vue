@@ -5,6 +5,9 @@ import AtomBaseButton from "../../atoms/Buttons/AtomBaseButton.vue";
 import OrganismEditProfile from "./OrganismEditProfile.vue";
 
 const showEditProfile = ref(false);
+
+defineProps(["user"])
+
 const handleEditProfile = (value) => {
   showEditProfile.value = value;
 };
@@ -33,7 +36,7 @@ const handleEditProfile = (value) => {
       >
       <img
         class="block w-20 h-20 rounded-md"
-        src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_1440x810/public/media/image/2018/11/devil-may-cry-5.jpg?itok=U3-6Fzrv"
+        :src="user.image"
         alt=""
       />
     </div>
@@ -41,7 +44,7 @@ const handleEditProfile = (value) => {
       <AtomText class="text-gray-300 text-sm w-2/5 flex items-center"
         >NAME</AtomText
       >
-      <AtomText>Xanthe Neal</AtomText>
+      <AtomText>{{user.name}} {{user.lastname}}</AtomText>
     </div>
     <div class="px-10 py-6 flex border-t">
       <AtomText class="text-gray-300 text-sm w-2/5 flex items-center"
@@ -55,20 +58,20 @@ const handleEditProfile = (value) => {
       <AtomText class="text-gray-300 text-sm w-2/5 flex items-center"
         >PHONE</AtomText
       >
-      <AtomText>908249274292</AtomText>
+      <AtomText></AtomText>
     </div>
     <div class="px-10 py-6 flex border-t">
       <AtomText class="text-gray-300 text-sm w-2/5 flex items-center"
         >EMAIL</AtomText
       >
-      <AtomText>xanthe.neal@gmail.com</AtomText>
+      <AtomText>{{user.email}}</AtomText>
     </div>
     <div class="px-10 py-6 flex border-t">
       <AtomText class="text-gray-300 text-sm w-2/5 flex items-center"
         >PASSWORD</AtomText
       >
-      <AtomText>***********</AtomText>
+      <AtomText></AtomText>
     </div>
   </div>
-  <OrganismEditProfile v-else />
+  <OrganismEditProfile v-else :user="user"/>
 </template>

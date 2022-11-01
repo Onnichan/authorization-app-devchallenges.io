@@ -1,20 +1,21 @@
 <script setup>
-import { onMounted, ref } from "vue";
+import { onMounted} from "vue";
 import TemplateProfileForm from "../components/template/TemplateProfileForm.vue";
+import AuthService from "../services/auth.service";
+import store from "../store/index";
 
-const user = ref(null);
+// const user = ref(null);
 
-onMounted(() => {
+onMounted(async () => {
   // console.log("mounted");
-  fetch("http://localhost:4000/api/v1/auth/login/success").then((success) =>
-    success.json()
-  );
-  // .then((resp) => (user.value = resp));
-  // console.log("user");
-  // user.value = login.json();
+  const resp = await AuthService.oauthSuccessLogin();
+  if(resp){
+    console.log(resp);
+    store.commit("auth/updateUser", resp);
+  }
+  // console.log(store.state.auth.user);
 });
 </script>
 <template>
-  {{ user }}
-  <TemplateProfileForm></TemplateProfileForm>
+  <TemplateProfileForm :user="store.state.auth.user"></TemplateProfileForm>
 </template>

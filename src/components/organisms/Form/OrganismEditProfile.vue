@@ -2,6 +2,9 @@
 import AtomBaseButton from "../../atoms/Buttons/AtomBaseButton.vue";
 import AtomInput from "../../atoms/Input/AtomInput.vue";
 import AtomText from "../../atoms/Text/AtomText.vue";
+
+defineProps(["user"])
+
 </script>
 <template>
   <form
@@ -17,7 +20,7 @@ import AtomText from "../../atoms/Text/AtomText.vue";
       <label for="file-input">
         <img
           class="w-20 h-20 block rounded-lg hover:cursor-pointer"
-          src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_1440x810/public/media/image/2018/11/devil-may-cry-5.jpg?itok=U3-6Fzrv"
+          :src="user.image"
           alt=""
         />
       </label>

@@ -1,6 +1,8 @@
 <script setup>
 import OrganismProfileForm from "../organisms/Form/OrganismProfileForm.vue";
+
+defineProps(["user"])
 </script>
 <template>
-  <OrganismProfileForm></OrganismProfileForm>
+  <OrganismProfileForm :user="user"></OrganismProfileForm>
 </template>
