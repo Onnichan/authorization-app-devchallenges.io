@@ -13,7 +13,9 @@ const handleEditProfile = (value) => {
 };
 </script>
 <template>
-  <div v-if="!showEditProfile" class="border border-gray-400 rounded-xl">
+  <AtomText v-if="!showEditProfile" class="text-center text-3xl" tag="h1">Personal info</AtomText>
+  <AtomText v-if="!showEditProfile" class="text-center mt-3 mb-10 font-extralight" tag="p">Basic info, like your name and photo</AtomText>
+  <div v-if="!showEditProfile" class="border-0 md:border md:border-gray-400 md:rounded-xl w-full md:w-3/5 md:mx-auto my-5">
     <div class="px-10 py-8 flex justify-between">
       <div>
         <AtomText class="text-2xl" tag="h1">Profile</AtomText>
@@ -69,5 +71,5 @@ const handleEditProfile = (value) => {
       <AtomText></AtomText>
     </div>
   </div>
-  <OrganismEditProfile v-else :user="user" />
+  <OrganismEditProfile v-else :user="user" @back="handleEditProfile(false)"/>
 </template>
