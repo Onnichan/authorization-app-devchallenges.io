@@ -1,3 +1,4 @@
+<!-- eslint-disable no-console -->
 <script setup>
 import { ref } from "vue";
 import AtomBaseButton from "../../atoms/Buttons/AtomBaseButton.vue";
