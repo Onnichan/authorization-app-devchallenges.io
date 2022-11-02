@@ -7,8 +7,8 @@ defineProps({
   height: {
     type: String,
     default: "20px",
-  }
-})
+  },
+});
 </script>
 <template>
   <svg

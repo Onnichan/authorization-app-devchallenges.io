@@ -8,7 +8,9 @@ import MoleculeTextField from "../../molecules/TextField/MoleculeTextField.vue";
 const props = defineProps({ icons: Array });
 </script>
 <template>
-  <form class="p-14 border border-gray-500 rounded-3xl flex flex-col gap-5 mx-5 sm:w-4/5 md:w-3/5 lg:w-2/5 sm:mx-auto my-16">
+  <form
+    class="p-14 border border-gray-500 rounded-3xl flex flex-col gap-5 mx-5 sm:w-4/5 md:w-3/5 lg:w-2/5 sm:mx-auto my-16"
+  >
     <AtomLogo></AtomLogo>
     <AtomText tag="h1" class="mt-4 font-bold text-lg"
       >Join thousands of learners from around the world</AtomText

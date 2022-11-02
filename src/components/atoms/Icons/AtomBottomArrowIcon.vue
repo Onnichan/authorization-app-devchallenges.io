@@ -2,13 +2,13 @@
 defineProps({
   width: {
     type: String,
-    default: "10px"
+    default: "10px",
   },
   height: {
     type: String,
-    default: "10px"
-  }
-})
+    default: "10px",
+  },
+});
 </script>
 <template>
   <svg

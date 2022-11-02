@@ -15,6 +15,6 @@ onMounted(async () => {
 });
 </script>
 <template>
-  <OrganismNavbar :user="store.state.auth.user"/>
+  <OrganismNavbar :user="store.state.auth.user" />
   <TemplateProfileForm :user="store.state.auth.user"></TemplateProfileForm>
 </template>
