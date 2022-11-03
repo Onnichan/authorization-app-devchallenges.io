@@ -58,15 +58,13 @@ const handleEditProfile = (value) => {
       <AtomText class="text-gray-300 text-sm w-2/5 flex items-center"
         >BIO</AtomText
       >
-      <AtomText class="w-3/5"
-        >{{user.description}}</AtomText
-      >
+      <AtomText class="w-3/5">{{ user.description }}</AtomText>
     </div>
     <div class="px-10 py-6 flex border-t">
       <AtomText class="text-gray-300 text-sm w-2/5 flex items-center"
         >PHONE</AtomText
       >
-      <AtomText>{{user.phone}}</AtomText>
+      <AtomText>{{ user.phone }}</AtomText>
     </div>
     <div class="px-10 py-6 flex border-t">
       <AtomText class="text-gray-300 text-sm w-2/5 flex items-center"
@@ -78,7 +76,7 @@ const handleEditProfile = (value) => {
       <AtomText class="text-gray-300 text-sm w-2/5 flex items-center"
         >PASSWORD</AtomText
       >
-      <AtomText>{{user.password}}</AtomText>
+      <AtomText>{{ user.password }}</AtomText>
     </div>
   </div>
   <OrganismEditProfile v-else :user="user" @back="handleEditProfile(false)" />
