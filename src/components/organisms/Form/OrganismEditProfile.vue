@@ -6,15 +6,16 @@ import AtomInput from "../../atoms/Input/AtomInput.vue";
 import AtomText from "../../atoms/Text/AtomText.vue";
 import AtomLeftArrowIcon from "../../atoms/Icons/AtomLeftArrowIcon.vue";
 import UserService from "../../../services/user.service";
+import store from "../../../store";
 
 const props = defineProps(["user"]);
 const name = ref(props.user.name);
-const bio = ref("");
-const phone = ref("");
+const bio = ref(props.user.description);
+const phone = ref(props.user.phone);
 const email = ref(props.user.email);
-const password = ref("");
+const password = ref(props.user.password);
 
-defineEmits(["back"]);
+const emits = defineEmits(["back"]);
 
 const handleSubmit = async () => {
   const res = await UserService.update({
@@ -26,6 +27,19 @@ const handleSubmit = async () => {
     email: email.value,
     password: password.value,
   });
+
+  if (res[0] > 0) {
+    store.commit("auth/updateUser", {
+      id: props.user.id,
+      oauth_id: props.user.oauth_id,
+      name: name.value,
+      description: bio.value,
+      phone: phone.value,
+      email: email.value,
+      password: password.value,
+    });
+    emits("back");
+  }
   console.log(res);
 };
 </script>
