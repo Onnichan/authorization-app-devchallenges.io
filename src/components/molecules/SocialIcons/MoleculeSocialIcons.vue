@@ -6,6 +6,7 @@ const props = defineProps({
 });
 
 const handleOauth = (endpoint) => {
+  console.log("endpoint", endpoint);
   window.open(endpoint, "_self");
 };
 
