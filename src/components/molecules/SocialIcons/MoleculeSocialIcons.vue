@@ -6,8 +6,8 @@ const props = defineProps({
 });
 
 const handleOauth = (endpoint) => {
-  console.log("endpoint", endpoint);
   window.open(endpoint, "_self");
+  console.log("endpoint", endpoint);
 };
 
 const iconsFiltered = () =>

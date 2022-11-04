@@ -6,8 +6,10 @@ const login = (user, pass) =>
     password: pass,
   });
 
-const oauthSuccessLogin = () =>
-  ApiRequest.get("auth/login/success", { withCredentials: true });
+const oauthSuccessLogin = () => {
+  console.log('here succes', import.meta.env.VITE_URL_BASE_API);
+  return ApiRequest.get("auth/login/success", { withCredentials: true });
+};
 
 const register = (name, lastname, email, password, confirmPassword) =>
   ApiRequest.post("auth/register", {
