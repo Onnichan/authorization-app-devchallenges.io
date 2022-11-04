@@ -7,7 +7,7 @@ const login = (user, pass) =>
   });
 
 const oauthSuccessLogin = () => {
-  console.log('here succes', import.meta.env.VITE_URL_BASE_API);
+  console.log("here succes", import.meta.env.VITE_URL_BASE_API);
   return ApiRequest.get("auth/login/success", { withCredentials: true });
 };
 
