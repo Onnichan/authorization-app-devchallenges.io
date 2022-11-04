@@ -9,32 +9,32 @@ const icons = [
   {
     name: "email",
     icon: AtomEmailIcon,
-    endpoint: "http://localhost:4000/api/v1/auth/google",
+    endpoint: import.meta.env.VITE_GOOGLE_OAUTH,
   },
   {
     name: "lock",
     icon: AtomLockIcon,
-    endpoint: "http://localhost:4000/api/v1/auth/google",
+    endpoint: import.meta.env.VITE_GOOGLE_OAUTH,
   },
   {
     name: "facebook",
     icon: AtomFacebookIcon,
-    endpoint: "http://localhost:4000/api/v1/auth/google",
+    endpoint: import.meta.env.VITE_GOOGLE_OAUTH,
   },
   {
     name: "github",
     icon: AtomGithubIcon,
-    endpoint: "http://localhost:4000/api/v1/auth/google",
+    endpoint: import.meta.env.VITE_GOOGLE_OAUTH,
   },
   {
     name: "twitter",
     icon: AtomTwitterIcon,
-    endpoint: "http://localhost:4000/api/v1/auth/google",
+    endpoint: import.meta.env.VITE_GOOGLE_OAUTH,
   },
   {
     name: "gmail",
     icon: AtomGmailIcon,
-    endpoint: "http://localhost:4000/api/v1/auth/google",
+    endpoint: import.meta.env.VITE_GOOGLE_OAUTH,
   },
 ];
 

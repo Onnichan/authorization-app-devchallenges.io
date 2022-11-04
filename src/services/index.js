@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 import axios from "axios";
 
-const URL_BASE_API = "http://localhost:4000/api/v1";
+const URL_BASE_API = import.meta.env.VITE_URL_BASE_API;
 
 export const ApiRequest = axios.create({
   baseURL: URL_BASE_API,
