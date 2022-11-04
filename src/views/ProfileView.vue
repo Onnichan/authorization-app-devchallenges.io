@@ -8,8 +8,9 @@ import store from "../store/index";
 // const user = ref(null);
 
 onMounted(async () => {
+  console.log("mounting");
   const resp = await AuthService.oauthSuccessLogin();
-  console.log("response user", resp);
+  console.log("response user");
 
   if (resp) {
     console.log("response user 2", resp);
