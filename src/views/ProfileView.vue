@@ -10,7 +10,7 @@ import store from "../store/index";
 onMounted(async () => {
   const resp = await AuthService.oauthSuccessLogin();
   console.log("response user", resp);
-  
+
   if (resp) {
     console.log("response user 2", resp);
     store.commit("auth/updateUser", resp);
